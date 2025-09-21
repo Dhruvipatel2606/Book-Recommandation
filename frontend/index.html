@@ -1,0 +1,65 @@
+             
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Price Comparison & Recommendation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📚 Book Price Comparison & Recommendation</h1>
+        <p>Compare book prices between Amazon and Flipkart, get recommendations, and ML predictions</p>
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌗 Theme</button>
+    </header>
+    <div class="container">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Enter book title..." required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="resultSection" style="display:none;">
+            <h2>Book Info</h2>
+            <table id="bookDetailsTable" class="borderless-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN10</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Amazon</b></td>
+                        <td id="amazonTitle"></td>
+                        <td id="amazonAuthor"></td>
+                        <td id="amazonISBN"></td>
+                        <td id="amazonPrice"></td>
+                        <td id="amazonRating"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Flipkart</b></td>
+                        <td id="flipkartTitle"></td>
+                        <td id="flipkartAuthor"></td>
+                        <td id="flipkartISBN"></td>
+                        <td id="flipkartPrice"></td>
+                        <td id="flipkartRating"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="margin-top:10px"><b>Cheapest Platform:</b> <span id="cheapestPlatform"></span></div>
+            <div><b>Predicted Rating:</b> <span id="predictedRating"></span></div>
+            <h2>Recommended Books</h2>
+            <div id="recommendations" class="recommendation-cards"></div>
+        </div>
+        <div id="errorMsg" class="error"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

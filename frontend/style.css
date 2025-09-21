@@ -1,0 +1,300 @@
+/* Price highlight classes */
+.lowest-price {
+    background: #43a047 !important;
+    color: #fff !important;
+}
+.highest-price {
+    background: #ffe082 !important;
+    color: #000 !important;
+}
+/* Remove rating and table cell styling */
+#cheapestPlatform {
+    font-size: 2rem;
+    color: #d32f2f;
+    font-weight: bold;
+    margin: 16px 0;
+    display: inline-block;
+}
+/* Borderless table style */
+.borderless-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+.borderless-table th, .borderless-table td {
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+}
+.borderless-table th {
+    background: #f7f7f7;
+    font-weight: bold;
+}
+/* Price highlight classes */
+.lowest-price {
+    background: #43a047 !important;
+    color: #fff !important;
+}
+.highest-price {
+    background: #ffe082 !important;
+    color: #000 !important;
+}
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.4s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+    margin-top: 10px;
+    background: rgba(255,255,255,0.85);
+    color: #333;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+.theme-toggle:hover {
+    transform: translateY(-1px);
+}
+
+/* Dark theme */
+body.dark {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #e2e8f0;
+}
+body.dark .result-section { background: #0b1220; box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+body.dark table { background: #0f172a; }
+body.dark th { background: linear-gradient(45deg, #334155, #1e293b); }
+body.dark td { border-bottom: 1px solid #1f2937; }
+body.dark .connection-status { background: rgba(255,255,255,0.08); color: #e2e8f0; }
+body.dark .api-info { background: rgba(255,255,255,0.08); color: #e2e8f0; }
+body.dark .recommendation-card { background: linear-gradient(135deg, #334155, #1f2937); }
+
+/* Layout container centering */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+
+/* Center header text and constrain width */
+header {
+    text-align: center;
+    margin: 0 auto 32px auto;
+    max-width: 760px;
+}
+header p { margin-top: 6px; }
+
+/* Center search section */
+.search-section { display: flex; justify-content: center; }
+.search-box { width: 100%; max-width: 640px; }
+
+/* Result section centering */
+.result-section { max-width: 960px; margin: 0 auto 24px auto; }
+
+/* Table responsiveness */
+.comparison-table { overflow-x: auto; }
+ table { width: 100%; min-width: 640px; }
+
+/* Status section centered */
+.status-section { justify-content: center; }
+
+/* Recommendation cards responsive grid */
+.recommendation-cards { display: grid; grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) ); gap: 16px; }
+
+/* API info centered block */
+.api-info { max-width: 960px; margin: 24px auto; }
+
+button {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+button:hover {
+    body {
+        background: #f7f7f7;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 32px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+    input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+    button {
+        padding: 10px 24px;
+        font-size: 16px;
+        border: none;
+        background: #0078d7;
+        color: #fff;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #005fa3;
+    }
+    #errorMsg {
+        color: #d8000c;
+        text-align: center;
+        margin-top: 16px;
+    }
+    #resultSection {
+        margin-top: 32px;
+    }
+    #priceTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 24px;
+    }
+    #priceTable th, #priceTable td {
+        border: 1px solid #e0e0e0;
+        padding: 12px;
+        text-align: center;
+    }
+    .highest-price {
+        font-weight: bold;
+        color: #fff !important;
+        background: #d32f2f !important;
+        border-radius: 4px;
+    }
+        .lowest-price {
+            font-weight: bold;
+            color: #fff !important;
+            background: #43a047 !important;
+            border-radius: 4px;
+        }
+    #cheapestPlatform {
+        font-weight: bold;
+        color: #fff;
+        background: #43a047;
+        border-radius: 4px;
+    }
+        .recommendation-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+    .recommendation-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+    .recommendation-card {
+        background: #f1f8e9;
+        border: 1px solid #c5e1a5;
+        border-radius: 8px;
+        padding: 16px;
+        min-width: 180px;
+        max-width: 220px;
+        box-shadow: 0 1px 4px rgba(67,160,71,0.08);
+    }
+    .recommendation-card h3 {
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        color: #388e3c;
+    }
+    .recommendation-card p {
+        margin: 0;
+        font-size: 15px;
+        color: #333;
+    }
+    @media (max-width: 700px) {
+        .container {
+            max-width: 98vw;
+            padding: 12px;
+        }
+        .recommendation-cards {
+            gap: 8px;
+        }
+        .recommendation-card {
+            min-width: 120px;
+            max-width: 160px;
+            padding: 8px;
+        }
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .container { padding: 16px 12px; }
+    header h1 { font-size: 1.8rem; }
+    .search-box { box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+    table { min-width: 520px; }
+}
+
+@media (max-width: 560px) {
+    header h1 { font-size: 1.5rem; }
+    header p { font-size: 0.95rem; }
+    #searchInput {
+        flex: 1;
+        padding: 22px 28px; /* increased */
+        border: none;
+        font-size: 1.25rem; /* increased */
+        outline: none;
+        background: white;
+    }
+    #searchBtn {
+        padding: 22px 34px; /* increased */
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem; /* increased */
+        font-weight: 700; /* bolder */
+        transition: all 0.3s ease;
+    }
+}
+
+/* Cheapest platform pill */
+.cheapest-pill {
+    display: inline-block;
+    background: #ffc0cb;
+    color: #b0003a;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Ensure price highlight classes exist */
+.price-cell.lowest-price {
+    color: #0f5132;
+    background: #d1e7dd;
+}
+.price-cell.highest-price {
+    color: #842029;
+    background: #f8d7da;
+}
